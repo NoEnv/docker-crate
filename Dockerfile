@@ -1,4 +1,4 @@
-FROM crate:6.0.4
+FROM crate:6.1.1
 
 RUN curl -s https://repo1.maven.org/maven2/io/crate/crate-jmx-exporter/1.2.3/crate-jmx-exporter-1.2.3.jar -o /opt/crate-jmx-exporter.jar \
  && sed -i 's/-XX:+UseG1GC -XX:G1ReservePercent=25 -XX:InitiatingHeapOccupancyPercent=30/-XX:+UseZGC/' /crate/bin/crate \
